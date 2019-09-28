@@ -13,8 +13,8 @@ class Post
   end 
   
   def author_name
-    if post.author 
-      post.author.name 
+    if @author
+      self.author.name 
     end
   end
   
