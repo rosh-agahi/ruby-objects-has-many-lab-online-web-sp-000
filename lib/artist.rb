@@ -20,9 +20,7 @@ class Artist
   end
   
   def song_count
-    @@song_count = []
-    Song.all.collect{|song| @@song_count << song}
-    @@song_count.size
+    Songs.all.count
   end
     
   
