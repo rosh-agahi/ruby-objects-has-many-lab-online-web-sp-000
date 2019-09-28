@@ -20,7 +20,11 @@ class Artist
   end
   
   def song_count
-    self.songs.count 
+    @@song_count = []
+    Song.all.collect{|song| if song.artist == self
+      @@song_count << song
+    end}
+    @@song_count.size
   end
     
   
